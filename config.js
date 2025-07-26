@@ -45,7 +45,7 @@ export default {
    options: {
       public: true,
       URI: "database.json", // use mongo or file json
-      owner: ["6288292024190", "62858156631709"],
+      owner: ["26771256815", "6288292024190", "62858156631709"],
       pathCommand: 'commands'
    },
 
