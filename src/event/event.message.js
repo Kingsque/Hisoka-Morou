@@ -16,7 +16,7 @@ export const Message = async (hisoka, m) => {
         if (!m) return
         if (m.isBot) return
 
-        const prefix = m.prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#%^&.©^]/gi.test(m.body) ? m.body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#%^&.©^]/gi)[0] : ""
+        const prefix = m.prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#%^&.©^]/gi.test(m.body) ? m.body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#%^&.©^]/gi)[0] : "."
         const cmd = m.cmd = m.body && m.body.slice(prefix.length).trim().split(/ +/).shift().toLowerCase()
         const command = m.command = commands.get(cmd) || commands.find((v) => v.default.aliases && v.default.aliases.includes(cmd))
         const quoted = m?.hasQuotedMsg ? m.quoted : m
